@@ -1,8 +1,19 @@
 # 【Review Under at The Visual Computer】Enhancing Industrial Defect Detection: A Nonsymmetric Skip Fusion Autoencoder Approach
 This repository contains the code and dataset for the paper titled "Enhancing Industrial Defect Detection: A Nonsymmetric Skip Fusion Autoencoder Approach", currently under review at The Visual Computer. 
-##Setup
+#Setup
 
-### Mvtec AD Dataset  
+## Packages
+
+```
+Python==3.10
+torch==1.13.0
+torchvision==0.14.0
+tifffile==2021.7.30
+tqdm==4.56.0
+scikit-learn==1.2.2
+```
+
+## Mvtec AD Dataset  
 
 For Mvtec evaluation code install:
 
@@ -15,7 +26,7 @@ tifffile==2021.7.30
 tqdm==4.56.0
 ```
 
-Download dataset (if you already have downloaded then set path to dataset (`--mvtec_ad_path`) when calling `efficientad.py`).
+Download dataset (if you already have downloaded then set path to dataset (`--mvtec_ad_path`) when calling `NSFAE.py`).
 
 ```
 mkdir mvtec_anomaly_detection
@@ -31,4 +42,12 @@ Download evaluation code:
 wget https://www.mydrive.ch/shares/60736/698155e0e6d0467c4ff6203b16a31dc9/download/439517473-1665667812/mvtec_ad_evaluation.tar.xz
 tar -xvf mvtec_ad_evaluation.tar.xz
 rm mvtec_ad_evaluation.tar.xz
+```
+# train
+```
+python train.py  
+```
+# Test
+```
+python test.py  
 ```
